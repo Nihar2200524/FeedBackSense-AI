@@ -4,6 +4,11 @@ import { AnalysisResult, FeedbackItem, BatchAnalysisResult } from "../types";
 // Initialize the Gemini API client
 const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY }});
 
+// Validate API key exists
+if (!import.meta.env.VITE_GEMINI_API_KEY) {
+  console.warn('⚠️ VITE_GEMINI_API_KEY environment variable is not set. Features requiring AI will not work.');
+}
+
 const modelId = "gemini-2.5-flash";
 
 export const analyzeFeedback = async (text: string): Promise<AnalysisResult> => {
