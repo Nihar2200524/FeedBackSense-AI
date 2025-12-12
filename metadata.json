@@ -1,0 +1,5 @@
+{
+  "name": "FeedbackSense AI",
+  "description": "An automated customer feedback analyst that turns unstructured reviews and support tickets into structured insights using Gemini.",
+  "requestFramePermissions": []
+}
